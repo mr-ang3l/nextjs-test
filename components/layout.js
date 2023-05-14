@@ -1,15 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from './layout.module.css';
+import utilStyles from '../styles/utils.module.css';
+import Link from 'next/link';
+import profileP from '../public/images/profile1.jpg'
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Ángel';
+
+const p = document.getElementsByClassName('paragraph');
+
+export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={utilStyles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -19,8 +23,8 @@ export default function Layout({ children, home }) {
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+            siteTitle,
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -30,13 +34,15 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src={profileP}
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
+              height={200}
+              width={200}
+              alt=""
             />
+            
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <div className={utilStyles.container1}></div>
           </>
         ) : (
           <>
@@ -47,7 +53,7 @@ export default function Layout({ children, home }) {
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt={name}
+                alt=""
               />
             </Link>
             <h2 className={utilStyles.headingLg}>
@@ -65,5 +71,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }
