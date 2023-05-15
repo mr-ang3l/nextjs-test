@@ -7,8 +7,6 @@ import profileP from '../public/images/profile1.jpg'
 
 const name = 'Ángel';
 
-const p = document.getElementsByClassName('paragraph');
-
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
