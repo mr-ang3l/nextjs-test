@@ -20,7 +20,7 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <p className={utilStyles.paragraph}>Hi, my name is<b class={'name'}> Ángel Martínez </b>and I'm a front-end engineer specializing in React and Next JS.</p>
+        <p className={utilStyles.paragraph}>Hi, my name is Ángel Martínez, I'm a <b class={'name'}>front-end engineer</b> specialized in React and Next JS currently based in Monterrey, Nuevo León.</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)

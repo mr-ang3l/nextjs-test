@@ -31,15 +31,14 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <Image
-              priority
-              src={profileP}
-              className={utilStyles.borderCircle}
-              height={200}
-              width={200}
-              alt=""
-            />
-            
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                priority
+                src={profileP}
+                className={utilStyles.borderCircle}
+                height={200}
+                width={200}
+                alt=""
+              />
+            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.name}`}>{name} <p class={utilStyles.emoji}>😄</p></h1>
             <div className={utilStyles.container1}></div>
           </>
         ) : (
