@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import profileP from '../public/images/profile1.jpg'
 
 const name = 'Ángel';
 
@@ -32,7 +31,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
                 priority
-                src={profileP}
+                src="/images/profile1.jpg"
                 className={utilStyles.borderCircle}
                 height={200}
                 width={200}
@@ -45,7 +44,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                   priority
-                  src={profileP}
+                  src="/images/profile1.jpg"
                   className={`${utilStyles.borderCircle1} ${utilStyles.borderCircle2}`}
                   height={200}
                   width={200}
