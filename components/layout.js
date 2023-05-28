@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
                 width={200}
                 alt=""
               />
-            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.name}`}>{name} <p class={utilStyles.emoji}>😄</p></h1>
+            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.name}`}>Nombre <p class={utilStyles.emoji}>😄</p></h1>
             <div className={utilStyles.container1}></div>
           </>
         ) : (
