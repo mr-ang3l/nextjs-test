@@ -22,7 +22,6 @@ a {
 }
 
 a:hover {
-  font-size: 101%;
   transition: all 150ms ease-in-out;
 }
 
@@ -38,6 +37,14 @@ p {
 img {
   max-width: 100%;
   display: block;
+}
+
+.hr {
+  height: 3em;
+  width: 100%;
+  border-radius: 0 .5em 0 0;
+  background: linear-gradient(90deg, rgba(0,112,243,1) 23%, rgba(0,73,255,1) 100%);
+  margin-top: 1em;
 }
 
 .name:hover {

@@ -38,8 +38,7 @@ export default function Layout({ children, home }) {
                 width={200}
                 alt=""
               />
-            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.name}`}>Nombre <p class={utilStyles.emoji}>😄</p></h1>
-            <div className={utilStyles.container1}></div>
+            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.name}`}></h1>
           </>
         ) : (
           <>
@@ -47,19 +46,19 @@ export default function Layout({ children, home }) {
               <Image
                   priority
                   src={profileP}
-                  className={utilStyles.borderCircle}
-                  height={150}
-                  width={150}
+                  className={`${utilStyles.borderCircle1} ${utilStyles.borderCircle2}`}
+                  height={200}
+                  width={200}
                   alt=""
                 />
             </Link>
-              <Link href="/" className={utilStyles.colorInherit}>
-                <h1 className={utilStyles.heading2x1}>{name}</h1>
-              </Link>
+            <Link href="/" className={utilStyles.colorInherit}>
+              <h1 className={`${utilStyles.heading2Xl} ${utilStyles.me}`}>Me?</h1>
+            </Link>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main><div className='hr'/>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
